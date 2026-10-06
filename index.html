@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yi Hu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #767676;
+    --line: #ececec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Lato", "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 800px; margin: 0 auto; padding: 88px 24px 96px; }
+  a { color: var(--text); text-decoration: underline; text-decoration-color: #c4c4c4; text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--text); }
+
+  /* ---------- 顶部：文字 + 照片 ---------- */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 72px;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.1;
+    margin: 0 0 22px;
+  }
+  .major { font-size: 1.15rem; font-weight: 700; margin: 0; }
+  .affil { color: var(--muted); margin: 2px 0 0; }
+  .contact { margin: 20px 0 0; }
+
+  .photo {
+    flex: none;
+    width: 190px; height: 190px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f2f2f2;
+    display: grid; place-items: center;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo span { font-size: 2.6rem; font-weight: 300; color: #b5b5b5; letter-spacing: .05em; }
+
+  /* ---------- 各个栏目 ---------- */
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  ol.plain, ul.plain { margin: 0; padding-left: 1.6em; }
+  ol.plain li, ul.plain li { padding: 4px 0 4px 6px; }
+  ol.plain li::marker, ul.plain li::marker { color: var(--muted); }
+  .status { color: var(--muted); }
+
+  footer { color: var(--muted); font-size: .85rem; padding-top: 8px; }
+
+  /* ---------- 手机 ---------- */
+  @media (max-width: 600px) {
+    main { padding-top: 56px; }
+    header { flex-direction: column-reverse; align-items: flex-start; gap: 28px; margin-bottom: 56px; }
+    .photo { width: 140px; height: 140px; }
+    h1 { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <!-- ================= 基本信息 + 照片 ================= -->
+  <header>
+    <div>
+      <h1>Yi Hu</h1>
+      <p class="major">Honors Mathematics</p>
+      <p class="affil">Computer Science · Complex Systems</p>
+      <p class="affil">University of Michigan, Ann Arbor</p>
+      <p class="contact"><a href="mailto:yihoa@umich.edu">yihoa@umich.edu</a></p>
+    </div>
+    <!-- 照片：命名为 photo.jpg，和 index.html 放在同一个文件夹 -->
+    <div class="photo">
+      <img src="photo.jpg" alt="Yi Hu" onerror="this.remove()">
+      <span>YH</span>
+    </div>
+  </header>
+
+  <!-- ================= Research Experience ================= -->
+  <section id="research">
+    <h2>Research Experience</h2>
+    <ol class="plain">
+      <li>Koopman Operator Theory &amp; Spectral Analysis</li>
+      <li>Koopman Methods for Reinforcement Learning &amp; Control</li>
+      <li>Neural Surrogates &amp; Control of Network Dynamical Systems</li>
+      <li>Cascades &amp; Threshold Dynamics on Complex Networks</li>
+      <li>Single-Cell Dynamics &amp; RNA Velocity</li>
+      <li>Graph Neural Networks for Multi-Agent Trajectory Prediction</li>
+      <li>Stochastic Optimization &amp; System Reliability</li>
+      <li>Hardware Security &amp; Cryptanalysis</li>
+    </ol>
+  </section>
+
+  <!-- ================= Seminars & Conferences ================= -->
+  <section id="talks">
+    <h2>Seminars &amp; Conferences</h2>
+    <ul class="plain">
+      <li>Conference on Complex Systems (CCS), 2026</li>
+      <li>SIAM Conference on Mathematics of Data Science (MDS), 2026</li>
+      <li>International Conference on System Reliability and Safety (ICSRS), 2026</li>
+    </ul>
+  </section>
+
+  <!-- ================= Papers & Preprints ================= -->
+  <section id="papers">
+    <h2>Papers &amp; Preprints</h2>
+    <ul class="plain">
+      <li>Koopman Operator Theory <span class="status">— Manuscript, 2026</span></li>
+      <li>Cascades on Complex Networks <span class="status">— Manuscript, 2026</span></li>
+      <li>Single-Cell Dynamics &amp; RNA Velocity <span class="status">— Preprint, 2026</span></li>
+    </ul>
+  </section>
+
+  <footer>Last updated: October 2026</footer>
+</main>
+</body>
+</html>
